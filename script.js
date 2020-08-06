@@ -14,7 +14,15 @@ let ticketPrice = +movieSelect.value; // + to convert to int
 // depending on the movie cost
 const updateSelectedCount = () => {
   const selectedSeats = document.querySelectorAll('.row .seat.selected'); // check to see if selected seats are in node list (array)
-  //console.log(selectedSeats); 
+  //console.log(selectedSeats);
+
+  // Copy selected seats int0 array
+  // Map through array
+  // return new array of seat index's
+  const seatsIndex = [...selectedSeats].map(seat => [...seats].indexOf(seat));
+
+  console.log(seatsIndex);
+
   const selectedSeatsCount = selectedSeats.length; // check count of selected seats
   //console.log(selectedSeatsCount);
 
